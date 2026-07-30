@@ -1,0 +1,168 @@
+{
+  "_comment": "서울 주요대학 규정집 후보 URL. confirmed=검색으로 실재 확인됨, candidate=관례적 패턴 추정(프로브로 검증 필요)",
+  "universities": [
+    {
+      "key": "dongguk",
+      "name": "동국대학교",
+      "group": "서연고서성한중경외시동건홍국숭세단+이대",
+      "status": "confirmed",
+      "known": "lawmaster",
+      "urls": [
+        "https://rule.dongguk.edu"
+      ]
+    },
+    {
+      "key": "snu",
+      "name": "서울대학교",
+      "status": "confirmed",
+      "known": "custom-jsp",
+      "urls": [
+        "http://rule.snu.ac.kr",
+        "https://rule.snu.ac.kr"
+      ]
+    },
+    {
+      "key": "yonsei",
+      "name": "연세대학교",
+      "status": "confirmed",
+      "known": "custom",
+      "urls": [
+        "https://rules.yonsei.ac.kr"
+      ]
+    },
+    {
+      "key": "korea",
+      "name": "고려대학교",
+      "status": "confirmed",
+      "urls": [
+        "https://policies.korea.ac.kr",
+        "http://infodepot.korea.ac.kr/rules/viewjsp/rulsUser.jsp"
+      ]
+    },
+    {
+      "key": "sogang",
+      "name": "서강대학교",
+      "status": "confirmed",
+      "known": "portal-embedded",
+      "urls": [
+        "https://www.sogang.ac.kr/ko/regulation/current-regulation?parentId=1",
+        "https://rule.sogang.ac.kr"
+      ]
+    },
+    {
+      "key": "skku",
+      "name": "성균관대학교",
+      "status": "candidate",
+      "urls": [
+        "https://rule.skku.edu",
+        "https://rules.skku.edu",
+        "https://law.skku.edu"
+      ]
+    },
+    {
+      "key": "hanyang",
+      "name": "한양대학교",
+      "status": "confirmed",
+      "urls": [
+        "https://portal.hanyang.ac.kr/huas/iycy/ruleBook.do"
+      ],
+      "note": "포털 내장 — 로그인 요구 가능"
+    },
+    {
+      "key": "cau",
+      "name": "중앙대학교",
+      "status": "candidate",
+      "urls": [
+        "https://rule.cau.ac.kr",
+        "https://rules.cau.ac.kr"
+      ]
+    },
+    {
+      "key": "khu",
+      "name": "경희대학교",
+      "status": "confirmed",
+      "known": "lawmaster-do",
+      "urls": [
+        "https://rule.khu.ac.kr"
+      ]
+    },
+    {
+      "key": "hufs",
+      "name": "한국외국어대학교",
+      "status": "confirmed",
+      "urls": [
+        "https://law.hufs.ac.kr"
+      ]
+    },
+    {
+      "key": "uos",
+      "name": "서울시립대학교",
+      "status": "confirmed",
+      "known": "lawmaster",
+      "urls": [
+        "http://rule.uos.ac.kr",
+        "https://rule.uos.ac.kr"
+      ]
+    },
+    {
+      "key": "konkuk",
+      "name": "건국대학교",
+      "status": "confirmed",
+      "urls": [
+        "https://rule.konkuk.ac.kr"
+      ]
+    },
+    {
+      "key": "hongik",
+      "name": "홍익대학교",
+      "status": "candidate",
+      "urls": [
+        "https://rule.hongik.ac.kr",
+        "https://rules.hongik.ac.kr"
+      ]
+    },
+    {
+      "key": "kookmin",
+      "name": "국민대학교",
+      "status": "confirmed",
+      "known": "lawmaster-do",
+      "urls": [
+        "https://rule.kookmin.ac.kr"
+      ]
+    },
+    {
+      "key": "ssu",
+      "name": "숭실대학교",
+      "status": "confirmed",
+      "known": "lawmaster",
+      "urls": [
+        "http://rule.ssu.ac.kr",
+        "https://rule.ssu.ac.kr"
+      ]
+    },
+    {
+      "key": "sejong",
+      "name": "세종대학교",
+      "status": "confirmed",
+      "urls": [
+        "https://www.sejong.ac.kr/kor/intro/regulation-overview.do"
+      ]
+    },
+    {
+      "key": "dankook",
+      "name": "단국대학교",
+      "status": "confirmed",
+      "urls": [
+        "https://rule.dankook.ac.kr"
+      ]
+    },
+    {
+      "key": "ewha",
+      "name": "이화여자대학교",
+      "status": "confirmed",
+      "urls": [
+        "https://www.ewha.ac.kr/ewha/intro/rules.do"
+      ]
+    }
+  ]
+}
