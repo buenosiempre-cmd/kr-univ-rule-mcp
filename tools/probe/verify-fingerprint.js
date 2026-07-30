@@ -54,6 +54,10 @@ check('lawmaster-do > custom', better('lawmaster-do','custom')===true);
 check('blocked > unknown', better('blocked','unknown')===true);
 check('unknown이 custom 못 덮음', better('unknown','custom')===false);
 
+console.log('\n[E2] blocked 강등 방지 (서울대 회귀)');
+check('유효 응답 있으면 강등 불가', canDemoteToBlocked({workingUrl:'http://rule.snu.ac.kr/'})===false);
+check('유효 응답 없으면 강등 가능', canDemoteToBlocked({workingUrl:null})===true);
+
 console.log('\n[F] 파서 (신형 호환 일반화)');
 const srvHtml = `<table><tbody class="tbody"><tr><td class="tbody_txt"><a href="javascript:lawSearchFullViewSrv('491','1437');">
 <span onclick='showSearchText("3-2-1")'>c</span><span onclick='showSearchText("재정시행세칙")'>t</span></a></td></tr></tbody></table>`;

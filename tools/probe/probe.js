@@ -62,6 +62,10 @@ function looksBlocked(html, finalUrl) {
   return /차단페이지|접근이 차단|비정상적인 접근|Access Denied|Web Application Firewall/i.test(head);
 }
 
+// 유효 응답(workingUrl)이 이미 잡힌 대학은 이후의 차단/503이 판정을 강등하지 못한다.
+// (서울대 사례: HTTP로 200 응답을 받았는데 후속 HTTPS의 WAF 차단이 판정을 덮던 버그)
+function canDemoteToBlocked(result) { return !result.workingUrl; }
+
 const RANK = { 'lawmaster-srv': 6, 'lawmaster-do': 6, 'lawmaster-mixed': 6, 'lawmaster': 6,
                'custom': 4, 'blocked': 3, 'unknown': 2, 'not-rules': 1, 'dead': 0 };
 function better(newV, curV) { return (RANK[newV] ?? 0) > (RANK[curV] ?? 0); }
@@ -236,11 +240,11 @@ async function probeUniversity(u) {
         result.attempts.push({ url, status: r.status, bytes: r.html.length });
 
         if (r.status === 503) {
-          if (better('blocked', result.verdict)) { result.verdict = 'blocked'; result.note = '503 — IP 차단. 국내망에서 재시도'; }
+          if (canDemoteToBlocked(result) && better('blocked', result.verdict)) { result.verdict = 'blocked'; result.note = '503 — IP 차단. 국내망에서 재시도'; }
           continue;
         }
         if (looksBlocked(r.html, r.url)) {
-          if (better('blocked', result.verdict)) { result.verdict = 'blocked'; result.note = 'WAF/보안장비 차단 — 국내망에서 재시도'; result.workingUrl = null; }
+          if (canDemoteToBlocked(result) && better('blocked', result.verdict)) { result.verdict = 'blocked'; result.note = 'WAF/보안장비 차단 — 국내망에서 재시도'; }
           continue;
         }
         if (r.status >= 400 || r.html.length < 200) continue;

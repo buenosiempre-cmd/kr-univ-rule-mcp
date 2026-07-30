@@ -1,16 +1,14 @@
 {
-  "name": "kr-univ-probe",
-  "version": "0.2.0",
-  "description": "",
-  "main": "index.js",
+  "name": "kr-univ-rule-probe",
+  "version": "0.2.1",
+  "description": "한국 주요대학 규정집 시스템 탐지 + LawMaster 파서 호환 실증 도구",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node probe.js",
+    "test": "node verify-fingerprint.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "cheerio": "^1.2.0",
+    "cheerio": "^1.0.0",
     "node-fetch": "^2.7.0"
   }
 }

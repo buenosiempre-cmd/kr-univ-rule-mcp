@@ -71,11 +71,11 @@
     {
       "key": "cau",
       "name": "중앙대학교",
-      "status": "candidate",
+      "status": "confirmed",
       "urls": [
-        "https://rule.cau.ac.kr",
-        "https://rules.cau.ac.kr"
-      ]
+        "https://www.cau.ac.kr/cms/FR_CON/index.do?MENU_ID=30"
+      ],
+      "known": "portal-embedded"
     },
     {
       "key": "khu",
@@ -115,11 +115,12 @@
     {
       "key": "hongik",
       "name": "홍익대학교",
-      "status": "candidate",
+      "status": "confirmed",
       "urls": [
-        "https://rule.hongik.ac.kr",
-        "https://rules.hongik.ac.kr"
-      ]
+        "https://www.hongik.ac.kr/kr/introduction/regulations-book.do",
+        "https://gw.hongik.ac.kr/rule/index.php"
+      ],
+      "known": "board"
     },
     {
       "key": "kookmin",

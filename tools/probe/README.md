@@ -46,5 +46,5 @@ LawMaster 고유 지문을 HTML에서 찾습니다: `lmxsrv` 경로, `lawFullCon
 ## 검증
 
 ```bash
-node verify-fingerprint.js   # 지문 로직 14개 단위 테스트 (네트워크 불필요)
+node verify-fingerprint.js   # 지문·판정 로직 23개 단위 테스트 (네트워크 불필요)
 ```
